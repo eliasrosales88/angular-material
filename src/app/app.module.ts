@@ -8,22 +8,27 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { RegisterComponent } from './views/register/register.component';
 import { InfoComponent } from './views/info/info.component';
+import { UserListComponent } from './views/user-list/user-list.component';
+import { HttpModule } from '@angular/http';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     RegisterComponent,
-    InfoComponent
+    InfoComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpModule
     
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
